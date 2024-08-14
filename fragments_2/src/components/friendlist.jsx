@@ -2,9 +2,9 @@ import styles from "./friendlist.module.css";
 
 const Friends = ({ Names }) => {
 
-  const change = (Names) => {
-    console.log(`${Names} clicked`);
-  };
+  // const friends_list = (Names) => {
+  //   console.log(`${Names} button Was clicked`);
+  // }
 
   return (
     <>
@@ -12,7 +12,7 @@ const Friends = ({ Names }) => {
         {Names.map((item) => (
           <li key={item} className="list-group-item">
             <span>{item}</span>
-            <button onClick={change(Names)} className={`${styles.profile} btn btn-primary`}>Profile</button>
+            <button onClick={(Names) => console.log(`${Names} hi`)} className={`${styles.profile} btn btn-primary`}>Profile</button>
           </li>
         ))}
       </ul>
